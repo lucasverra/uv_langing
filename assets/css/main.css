@@ -3155,6 +3155,17 @@
     width: 100px;
     height: 100px;
     margin: 5px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: .5;
+    transition:all .5s;
+    -webkit-transition:all .5s;
+    -ms-transition:all .5s;
+}
+#distrib_e a:hover  {
+	opacity: 1;
+	-webkit-filter: inherit;
+    filter: inherit;
 }
 #distrib_e a:last-child {
 	margin-right: 0;
