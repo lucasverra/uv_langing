@@ -26,6 +26,10 @@
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
 			});
+			$(document).ready(function() {
+				console.log('fire ready');
+				textTypeAnimation.init('#test-data', 1000);
+			});
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
