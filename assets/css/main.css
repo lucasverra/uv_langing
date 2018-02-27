@@ -3174,33 +3174,30 @@
 /*animations*/
 
 @-webkit-keyframes hvr-icon-pop {
-  50% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
+  from {bottom:20px; opacity: 0;}
+	to {bottom:0; opacity: 1;}
 }
 @keyframes hvr-icon-pop {
-  50% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
+	 from {bottom:20px; opacity: 0;}
+	to {bottom:0; opacity: 1;}
 }
 @-ms-keyframes hvr-icon-pop {
-  50% {
-    -webkit-transform: scale(1.5);
-    transform: scale(1.5);
-  }
+  from {bottom:20px; opacity: 0;}
+  to {bottom:0; opacity: 1;}
 }
 .loaded-anim {
-	transform: perspective(1px) translateZ(0);
+	/*transform: perspective(1px) translateZ(0);*/
+	position: relative;
+	opacity: 0;
     transition-duration: .5s;
     animation-name: hvr-icon-pop;
     -webkit-animation-duration: 0.5s;
     animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-iteration-count: 2;
-    animation-iteration-count: 2;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .headline-type-animation i {
