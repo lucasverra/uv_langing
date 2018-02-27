@@ -3158,3 +3158,35 @@
 #distrib_e a:last-child {
 	margin-right: 0;
 }
+
+/*animations*/
+
+@-webkit-keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+@-ms-keyframes hvr-icon-pop {
+  50% {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
+}
+.loaded-anim {
+	transform: perspective(1px) translateZ(0);
+    transition-duration: .5s;
+    animation-name: hvr-icon-pop;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 2;
+    animation-iteration-count: 2;
+}
