@@ -2484,6 +2484,7 @@
 				.feature.left .image img {
 					right: 0;
 					top: 0;
+					width: 100%;
 				}
 
 			.feature.left .content {
