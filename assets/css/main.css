@@ -3129,5 +3129,21 @@
 
 #distrib_e {
     display: flex;
-	justify-content:space-between;
+    display: -webkit-flex;
+    display: -ms-flex;
+	justify-content:center;
+	-webkit-justify-content:center;
+	-ms-justify-content:center;
+	flex-flow:row wrap;
+	-webkit-flex-flow:row wrap;
+	-ms-flex-flow:row wrap;
+}
+#distrib_e a {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+}
+#distrib_e a:last-child {
+	margin-right: 0;
 }
