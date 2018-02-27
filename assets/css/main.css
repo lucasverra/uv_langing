@@ -2575,12 +2575,15 @@
 			margin: 0 0 0.75em 0;
 			text-align: center;
 			width: 2.35em;
+			transition:all .5s;
+			-webkit-transition:all .5s;
+			-ms-transition:all .5s;
+			cursor: pointer;
 		}
-
-			#header .logo.fa-paper-plane-o:before {
-				left: -0.075em;
-				position: relative;
-			}
+		#header .logo.fa-paper-plane-o:before {
+			left: -0.075em;
+			position: relative;
+		}
 
 		#header h1 {
 			font-size: 2.5em;
