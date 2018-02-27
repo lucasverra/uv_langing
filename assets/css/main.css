@@ -2088,7 +2088,6 @@
 	.image {
 		border: 0;
 		display: inline-block;
-		position: relative;
 	}
 
 		.image:after {
@@ -2145,12 +2144,12 @@
 				color: #fff;
 				font-size: 6em;
 				height: 1em;
-				left: 50%;
+				/*left: 50%;*/
 				line-height: 1em;
-				margin: -0.5em 0 0 -0.5em;
-				position: absolute;
+				/*margin: -0.5em 0 0 -0.5em;*/
+				position: relative;
 				text-align: center;
-				top: 50%;
+				/*top: 50%;*/
 				width: 1em;
 				z-index: 1;
 			}
@@ -2428,11 +2427,20 @@
 		}
 
 		.feature .image {
-			display: inline-block;
 			height: 100%;
 			overflow: hidden;
 			position: relative;
 			width: 50%;
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flex;
+			justify-content:center;
+			-webkit-justify-content:center;
+			-ms-justify-content:center;
+			align-items:center;
+			-webkit-align-items:center;
+			-ms-align-items:center;
+			position: relative;
 		}
 
 			.feature .image img {
