@@ -23,7 +23,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.icon-logo-universal-voucher .path1:before {
+/*.icon-logo-universal-voucher .path1:before {
   content: "\e900";
   transition:all .5s;
   -webkit-transition:all .5s;
@@ -38,12 +38,12 @@
   margin-left: -1.283203125em;
   color: rgb(173, 173, 173);
 }
-
-#header .logo:hover .icon-logo-universal-voucher .path1:before {
+*/
+.icon-logo-universal-voucher .path1:before {
   content: "\e900";
   color: rgb(76, 214, 132);
 }
-#header .logo:hover .icon-logo-universal-voucher .path2:before {
+.icon-logo-universal-voucher .path2:before {
   content: "\e901";
   margin-left: -1.283203125em;
   color: rgb(5, 16, 57);
