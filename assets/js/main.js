@@ -26,6 +26,11 @@
 			$window.on('load', function() {
 				$body.removeClass('is-loading');
 			});
+			$(document).ready(function() {
+				console.log('fire ready');
+				languageSelector();
+				textTypeAnimation.init('#test-data', 1000);
+			});
 
 		// Fix: Placeholder polyfill.
 			$('form').placeholder();
@@ -38,4 +43,25 @@
 				);
 			});
 	});
+	function languageSelector() {
+		var isFirst = true;
+		$('.language-selector span').click(function() {
+			if(isFirst) {
+				$('.language-selector ul').addClass('active');
+				isFirst = false;
+			}
+			else {
+				$('.language-selector ul').removeClass('active');
+				isFirst = true;
+			}	
+		});
+		$('.language-selector ul li').each(function() {
+			$(this).find('a').click(function(ev){
+				ev.preventDefault();
+				var getvalue = $(this).parent().attr('data-nav');
+				$('.language-selector ul').removeClass('active');
+				$('.language-selector span').text(getvalue);
+			});
+		});
+	}
 })(jQuery);
