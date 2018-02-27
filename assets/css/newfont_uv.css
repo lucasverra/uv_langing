@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?vxitzj');
+  src:  url('../fonts/icomoon.eot?vxitzj#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?vxitzj') format('truetype'),
+    url('../fonts/icomoon.woff?vxitzj') format('woff'),
+    url('../fonts/icomoon.svg?vxitzj#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo-universal-voucher .path1:before {
+  content: "\e900";
+  color: rgb(76, 214, 132);
+}
+.icon-logo-universal-voucher .path2:before {
+  content: "\e901";
+  margin-left: -1.283203125em;
+  color: rgb(5, 16, 57);
+}
+.icon-logo-universal-voucher .path3:before {
+  content: "\e902";
+  margin-left: -1.283203125em;
+  color: rgb(5, 16, 57);
+}
+.icon-play:before {
+  content: "\e912";
+}
