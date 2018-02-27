@@ -2502,6 +2502,7 @@
 				.feature.right .image img {
 					left: 0;
 					top: 0;
+					width: 100%;
 				}
 
 			.feature.right .content {
