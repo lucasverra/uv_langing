@@ -3316,3 +3316,14 @@
 	opacity: 1;
 	top: 0;
 }
+
+
+.lan-fr,.lan-en {
+	display: none;
+}
+body.UK .lan-en {
+	display: block;
+}
+body.FR .lan-fr {
+	display: block;
+}

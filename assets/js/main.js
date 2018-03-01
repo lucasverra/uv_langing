@@ -30,6 +30,7 @@
 				console.log('fire ready');
 				languageSelector();
 				textTypeAnimation.init('#test-data', 1000);
+				textTypeAnimation.init('#test-info', 1000);
 			});
 
 		// Fix: Placeholder polyfill.
@@ -59,6 +60,12 @@
 			$(this).find('a').click(function(ev){
 				ev.preventDefault();
 				var getvalue = $(this).parent().attr('data-nav');
+				if(getvalue == 'FR') {
+					$(document.body).removeClass('UK').addClass(getvalue);
+				} else {
+					$(document.body).removeClass('FR').addClass(getvalue);
+				}
+
 				$('.language-selector ul').removeClass('active');
 				$('.language-selector span').text(getvalue);
 			});
