@@ -30,6 +30,31 @@
 				console.log('fire ready');
 				languageSelector();
 				textTypeAnimation.init('#test-data', 1000);
+				textTypeAnimation.init('#test-info', 1000);
+
+
+				$(window).scroll( function(){
+    
+			        /* Check the location of each desired element */
+			        $('.feature').each( function(i){
+			            console.log($(this));
+			            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+			            var bottom_of_window = $(window).scrollTop() + $(window).height();
+			            
+			            /* If the object is completely visible in the window, fade it it */
+			            if( bottom_of_window > bottom_of_object ){
+			                
+			                $(this).addClass('active');
+			                    
+			            }
+			            
+			        }); 
+			    
+			    });
+
+
+
+
 			});
 
 		// Fix: Placeholder polyfill.
@@ -59,6 +84,12 @@
 			$(this).find('a').click(function(ev){
 				ev.preventDefault();
 				var getvalue = $(this).parent().attr('data-nav');
+				if(getvalue == 'FR') {
+					$(document.body).removeClass('UK').addClass(getvalue);
+				} else {
+					$(document.body).removeClass('FR').addClass(getvalue);
+				}
+
 				$('.language-selector ul').removeClass('active');
 				$('.language-selector span').text(getvalue);
 			});
