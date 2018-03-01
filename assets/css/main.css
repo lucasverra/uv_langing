@@ -3175,15 +3175,15 @@
 /*animations*/
 
 @-webkit-keyframes hvr-icon-pop {
-  from {bottom:20px; opacity: 0;}
+  from {bottom:10px; opacity: 0;}
 	to {bottom:0; opacity: 1;}
 }
 @keyframes hvr-icon-pop {
-	 from {bottom:20px; opacity: 0;}
+	 from {bottom:10px; opacity: 0;}
 	to {bottom:0; opacity: 1;}
 }
 @-ms-keyframes hvr-icon-pop {
-  from {bottom:20px; opacity: 0;}
+  from {bottom:10px; opacity: 0;}
   to {bottom:0; opacity: 1;}
 }
 .loaded-anim {
@@ -3326,4 +3326,17 @@ body.UK .lan-en {
 }
 body.FR .lan-fr {
 	display: block;
+}
+
+.feature {
+    opacity:0;
+    transition:all 4s;
+    -webkit-transition:all 4s;
+    -ms-transition:all 4s;
+}
+.feature.active {
+	opacity: 1;
+	transition:all 4s;
+    -webkit-transition:all 4s;
+    -ms-transition:all 4s;
 }
