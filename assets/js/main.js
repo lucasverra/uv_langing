@@ -116,6 +116,10 @@
 			method:'GET',
 			// data: form.serialize(),
 			dataType: 'json',
+			headers: {
+				'Origin':'https://zealous-brahmagupta-52cb50.netlify.com/',
+				'Access-Control-Allow-Origin': '*',
+			},
 			beforeSend: function(ter) {
 				console.log('request is',ter);
 				console.log('hi bineesh');
