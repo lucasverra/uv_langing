@@ -114,8 +114,11 @@
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
+			dataType:'json',
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			}
 			beforeSend: function() {
-				console.log('hi bineesh');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
