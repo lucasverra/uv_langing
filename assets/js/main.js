@@ -126,9 +126,9 @@
 			cache: false,
 			headers: {
 				'Access-Control-Allow-Origin': '*',
-			}
+			},
 			beforeSend: function() {
-				console.log('test');
+				console.log('requesting');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
@@ -136,7 +136,7 @@
 				console.log('yes finished',response);
 			},
             error:function (response) {
-            	console.log('rest',response);	
+            	console.log('response',response);	
             }
 			
 		});
