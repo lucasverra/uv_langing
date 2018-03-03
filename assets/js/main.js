@@ -94,5 +94,22 @@
 				$('.language-selector span').text(getvalue);
 			});
 		});
-	}
+	},
+	function ajaxSubmit() {
+		$.ajax({
+			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/mail@domain.net,name,verbose',
+			method:''
+			dataType: 'json',
+			beforeSend: function() {
+				console.log('requesting');
+			},
+			success: function(response) {
+				console.log('sucess',response);
+			},
+			error: function(error) {
+				console.log('error',error);
+
+			}
+		})
+	},
 })(jQuery);
