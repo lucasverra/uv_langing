@@ -117,8 +117,9 @@
 			dataType:'json',
 			headers: {
 				'Access-Control-Allow-Origin': '*',
-			}
+			},
 			beforeSend: function() {
+				console.log('test');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
