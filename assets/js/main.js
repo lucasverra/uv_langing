@@ -114,14 +114,7 @@
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
-			// data: form.serialize(),
-			dataType: 'json',
-			headers: {
-				'Origin':'https://zealous-brahmagupta-52cb50.netlify.com/',
-				'Access-Control-Allow-Origin': '*',
-			},
-			beforeSend: function(ter) {
-				console.log('request is',ter);
+			beforeSend: function() {
 				console.log('hi bineesh');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
@@ -129,7 +122,7 @@
 			success: function(response) {
 				console.log('yes finished',response);
 			},
-            error:function () {
+            error:function (XMLHttpRequest) {
             	console.log('res',XMLHttpRequest);	
             }
 			
