@@ -117,6 +117,9 @@
 			// data: form.serialize(),
 			dataType: 'json',
 			crossDomain: true,
+			headers :{
+				'Access-Control-Allow-Origin': '*',
+			},
 			beforeSend: function() {
 				console.log('tested bineesh');
 				$('.loader').removeClass('hide');
