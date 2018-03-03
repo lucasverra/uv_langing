@@ -124,6 +124,9 @@
 			method:'GET',
 			dataType:"json",
 			cache: false,
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			}
 			beforeSend: function() {
 				console.log('test');
 				$('.loader').removeClass('hide');
