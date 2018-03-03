@@ -113,21 +113,21 @@
 		var verbose = $('.message').val();
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
-			type:'GET',
+			method:'GET',
 			// data: form.serialize(),
 			dataType: 'json',
-			crossDomain: true,
-			headers :{
-				'Access-Control-Allow-Origin': '*',
-			},
-			beforeSend: function() {
+			beforeSend: function(ter) {
+				console.log('request is',ter);
 				console.log('tested bineesh');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
-			success: function (data) {
-                          alert('ok!') // THIS IS ALWAYS CALLED (IMMEDIATELY)
-                  }
+			complete: function(res) {
+				console.log('complete',res);
+			},
+            error:function () {
+            	console.log('res',XMLHttpRequest);	
+            }
 			
 		});
 	}
