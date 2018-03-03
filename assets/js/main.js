@@ -118,12 +118,12 @@
 			dataType: 'json',
 			beforeSend: function(ter) {
 				console.log('request is',ter);
-				console.log('tested bineesh');
+				console.log('hi bineesh');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
-			success: function(res) {
-				console.log('complete',res);
+			success: function(response) {
+				console.log('yes finished',response);
 			},
             error:function () {
             	console.log('res',XMLHttpRequest);	
