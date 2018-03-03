@@ -3316,7 +3316,16 @@
 	opacity: 1;
 	top: 0;
 }
-
+input.error {
+	border: 1px solid red;
+}
+label.error {
+	text-align: left;
+	color: red;
+	font-size: 13px;
+    text-transform: capitalize;
+    font-weight: 500;
+}
 
 .lan-fr,.lan-en {
 	display: none;

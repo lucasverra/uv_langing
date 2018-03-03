@@ -33,17 +33,25 @@
 				textTypeAnimation.init('#test-info', 1000);
 
 				if($("#subscribe")) {
+					$("#subscribe").validate({
+						email: {
+							required:true,
+						},
+						name: {
+							required:true,
+						}
+					});
 					$('.sentForm').click(function(ev){
 						ev.preventDefault();
 						ev.stopPropagation();
-						ajaxSubmit();
+						if($("#subscribe").valid()) ajaxSubmit();
 					});
+
 				}
 				$(window).scroll( function(){
     
 			        /* Check the location of each desired element */
 			        $('.feature').each( function(i){
-			            console.log($(this));
 			            var bottom_of_object = $(this).position().top + $(this).outerHeight();
 			            var bottom_of_window = $(window).scrollTop() + $(window).height();
 			            
@@ -114,7 +122,7 @@
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
-			dataType:'json',
+			dataType:"json",
 			cache: false,
 			beforeSend: function() {
 				console.log('test');
