@@ -114,8 +114,8 @@
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
-			dataType: "json",
-			data: form.serialize(),
+			// data: form.serialize(),
+			dataType: 'json',
 			beforeSend: function() {
 				console.log('requesting');
 				$('.loader').removeClass('hide');
