@@ -32,7 +32,13 @@
 				textTypeAnimation.init('#test-data', 1000);
 				textTypeAnimation.init('#test-info', 1000);
 
-
+				if($("#subscribe")) {
+					$('.sentForm').click(function(ev){
+						ev.preventDefault();
+						ev.stopPropagation();
+						ajaxSubmit();
+					});
+				}
 				$(window).scroll( function(){
     
 			        /* Check the location of each desired element */
@@ -94,22 +100,38 @@
 				$('.language-selector span').text(getvalue);
 			});
 		});
-	},
+	}
 	function ajaxSubmit() {
+		var form = $('#subscribe');
+		// var data = {
+			// 'email' : $('.email').val(),
+		// 	// 'name': $('.name').val(),
+		// 	// 'verbose': $('.message').val(),
+		// };
+		var email = $('.email').val();
+		var name = $('.name').val();
+		var verbose = $('.message').val();
 		$.ajax({
-			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/mail@domain.net,name,verbose',
-			method:''
-			dataType: 'json',
+			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
+			method:'GET',
+			async: false,
+			dataType: 'text',
 			beforeSend: function() {
 				console.log('requesting');
+				$('.loader').removeClass('hide');
+				$('.sentForm').addClass('hide');
 			},
 			success: function(response) {
 				console.log('sucess',response);
+				$('.loader').addClass('hide');
+				$('.sentForm').removeClass('hide');
 			},
 			error: function(error) {
 				console.log('error',error);
+				$('.loader').addClass('hide');
+				$('.sentForm').removeClass('hide');
 
 			}
 		})
-	},
+	}
 })(jQuery);

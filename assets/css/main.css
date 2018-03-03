@@ -3340,3 +3340,10 @@ body.FR .lan-fr {
     -webkit-transition:all 4s;
     -ms-transition:all 4s;
 }
+
+.hide {
+	display: none !important;
+}
+.active {
+	display: block !important;
+}
