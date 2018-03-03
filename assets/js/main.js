@@ -122,7 +122,7 @@
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
-			complete: function(res) {
+			success: function(res) {
 				console.log('complete',res);
 			},
             error:function () {
