@@ -115,9 +115,7 @@
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
 			dataType:'json',
-			headers: {
-				'Access-Control-Allow-Origin': '*',
-			},
+			cache: false,
 			beforeSend: function() {
 				console.log('test');
 				$('.loader').removeClass('hide');
@@ -126,8 +124,8 @@
 			success: function(response) {
 				console.log('yes finished',response);
 			},
-            error:function (XMLHttpRequest) {
-            	console.log('res',XMLHttpRequest);	
+            error:function (response) {
+            	console.log('rest',response);	
             }
 			
 		});
