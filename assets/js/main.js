@@ -115,9 +115,9 @@
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			type:"GET",
 			// data: form.serialize(),
-			dataType: "text",
+			dataType: "jsonp",
 			beforeSend: function() {
-				console.log('requesting data');
+				console.log('tested bineesh');
 				$('.loader').removeClass('hide');
 				$('.sentForm').addClass('hide');
 			},
