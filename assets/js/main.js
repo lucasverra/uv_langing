@@ -122,11 +122,7 @@
 		$.ajax({
 			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
 			method:'GET',
-			dataType:"json",
-			cache: false,
-			headers: {
-				'Access-Control-Allow-Origin': '*',
-			},
+			dataType:'json',
 			beforeSend: function() {
 				console.log('requesting');
 				$('.loader').removeClass('hide');
@@ -136,7 +132,9 @@
 				console.log('yes finished',response);
 			},
             error:function (response) {
-            	console.log('response',response);	
+            	$('.loader').addClass('hide');
+				$('.sentForm').removeClass('hide');
+
             }
 			
 		});
