@@ -3365,7 +3365,18 @@ body.FR .lan-fr {
     -ms-transition: .5s all;
 }
 .failure {
-	display: none;
+	height: 0px;
+    overflow: hidden;
+	width: 80%;
+    overflow: hidden;
+    text-align: center;
+    margin: 0 auto;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -ms-transition: .5s all;
+}
+.failure img {
+	width: 100%;
 }
 body.ajx_sucess .sucess {
 	display: block;
@@ -3373,4 +3384,5 @@ body.ajx_sucess .sucess {
 }
 body.ajx_failure .failure {
 	display: block;
+	height: 150px;
 }
