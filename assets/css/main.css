@@ -3356,3 +3356,16 @@ body.FR .lan-fr {
 .active {
 	display: block !important;
 }
+
+.sucess {
+	display: none;
+}
+.failure {
+	display: none;
+}
+body.ajx_sucess .sucess {
+	display: block;
+}
+body.ajx_failure .failure {
+	display: block;
+}

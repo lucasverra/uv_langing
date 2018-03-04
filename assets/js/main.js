@@ -130,11 +130,26 @@
 			},
 			success: function(response) {
 				console.log('yes finished',response);
+				$('.loader').addClass('hide');
+				$('.sentForm').removeClass('hide');
+				console.log(response.email);
+				if(response.email) {
+					if($(document.body).hasClass('ajx_failure')) {
+						$(document.body).removeClass('ajx_failure');
+					}
+					$(document.body).addClass('ajx_sucess');
+				} else {
+					$(document.body).addClass('ajx_failure').removeClass('ajx_sucess');
+					$('.sentForm').removeClass('hide');
+				}
 			},
             error:function (response) {
             	$('.loader').addClass('hide');
+            	if($(document.body).hasClass('ajx_sucess')) {
+            		$(document.body).removeClass('ajx_sucess');
+            	}
+				$(document.body).addClass('ajx_failure');
 				$('.sentForm').removeClass('hide');
-
             }
 			
 		});
