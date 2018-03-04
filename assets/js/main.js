@@ -135,9 +135,12 @@
 				console.log(response.email);
 				if(response.email) {
 					if($(document.body).hasClass('ajx_failure')) {
-						$(document.body).removeClass('ajx_failure');
+						$(document.body).removeClass('ajx_failure'); 
 					}
 					$(document.body).addClass('ajx_sucess');
+					setTimeout(function(){
+					  $(document.body).removeClass('ajx_sucess');
+					}, 3000); 
 				} else {
 					$(document.body).addClass('ajx_failure').removeClass('ajx_sucess');
 					$('.sentForm').removeClass('hide');
@@ -148,6 +151,9 @@
             	if($(document.body).hasClass('ajx_sucess')) {
             		$(document.body).removeClass('ajx_sucess');
             	}
+            	setTimeout(function(){
+					  $(document.body).removeClass('ajx_failure');
+					}, 3000);
 				$(document.body).addClass('ajx_failure');
 				$('.sentForm').removeClass('hide');
             }
