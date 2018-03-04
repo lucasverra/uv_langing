@@ -3358,13 +3358,18 @@ body.FR .lan-fr {
 }
 
 .sucess {
-	display: none;
+	height: 0px;
+    overflow: hidden;
+    transition: .5s all;
+    -webkit-transition: .5s all;
+    -ms-transition: .5s all;
 }
 .failure {
 	display: none;
 }
 body.ajx_sucess .sucess {
 	display: block;
+	height: 150px;
 }
 body.ajx_failure .failure {
 	display: block;
