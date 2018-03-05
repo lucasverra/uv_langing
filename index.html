@@ -309,28 +309,36 @@
 						<h2> Seems like a good idea <br> but no specific use case <br> <u>yet</u> ? </h2>
 					<p>Subscribe to our brief & BI-MONTHLY (no more, promised <span class="fa fa-hand-paper-o "></span>) newsletter. </p>
 
-					<form action="#" name="news" method="POST" netlify>
+					<form action="#" name="news" method="POST" netlify id="subscribe">
 						<div class="row">
 							<div class="6u 12u(mobilep)">
-								<input type="text" name="name" placeholder="Name*" required />
+								<input class="name" type="text" name="name" placeholder="Name*" required />
 							</div>
 							<div class="6u 12u(mobilep)">
-								<input type="email" name="email" placeholder="Email*" required />
+								<input class="email" type="email" name="email" placeholder="Email*" required />
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
-								<textarea name="message" placeholder="Optional - You can brainstorm here" rows="1"></textarea>
+								<textarea class="message" name="message" placeholder="Optional - You can brainstorm here" rows="1"></textarea>
 							</div>
 						</div>
 						<div class="row">
 							<div class="12u">
 								<ul class="actions">
-									<li><input type="submit" value="Subscribe" /></li>
+									<li><input class="sentForm" type="submit" value="Subscribe" /></li>
+									<li class="loader hide"><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i></li>
 								</ul>
+								<div class="sucess">
+									<img src="images/success.gif"/>
+								</div>
+								<div class="failure">
+									<img src="images/failed.webp"/>
+								</div>
 							</div>
 						</div>
-					</form> 
+
+					</form>
 					<p></p>
 <!-- 					<ul class="icons">
 						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
@@ -349,6 +357,7 @@
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/typing.js"></script>

@@ -32,12 +32,26 @@
 				textTypeAnimation.init('#test-data', 1000);
 				textTypeAnimation.init('#test-info', 1000);
 
+				if($("#subscribe")) {
+					$("#subscribe").validate({
+						email: {
+							required:true,
+						},
+						name: {
+							required:true,
+						}
+					});
+					$('.sentForm').click(function(ev){
+						ev.preventDefault();
+						ev.stopPropagation();
+						if($("#subscribe").valid()) ajaxSubmit();
+					});
 
+				}
 				$(window).scroll( function(){
     
 			        /* Check the location of each desired element */
 			        $('.feature').each( function(i){
-			            console.log($(this));
 			            var bottom_of_object = $(this).position().top + $(this).outerHeight();
 			            var bottom_of_window = $(window).scrollTop() + $(window).height();
 			            
@@ -93,6 +107,57 @@
 				$('.language-selector ul').removeClass('active');
 				$('.language-selector span').text(getvalue);
 			});
+		});
+	}
+	function ajaxSubmit() {
+		var form = $('#subscribe');
+		// var data = {
+			// 'email' : $('.email').val(),
+		// 	// 'name': $('.name').val(),
+		// 	// 'verbose': $('.message').val(),
+		// };
+		var email = $('.email').val();
+		var name = $('.name').val();
+		var verbose = $('.message').val();
+		$.ajax({
+			url:'https://mlite-subscribe-8d7ad3er7vt6.runkit.sh/subscribe/'+email+','+name+','+verbose,
+			method:'GET',
+			dataType:'json',
+			beforeSend: function() {
+				console.log('requesting');
+				$('.loader').removeClass('hide');
+				$('.sentForm').addClass('hide');
+			},
+			success: function(response) {
+				console.log('yes finished',response);
+				$('.loader').addClass('hide');
+				$('.sentForm').removeClass('hide');
+				console.log(response.email);
+				if(response.email) {
+					if($(document.body).hasClass('ajx_failure')) {
+						$(document.body).removeClass('ajx_failure'); 
+					}
+					$(document.body).addClass('ajx_sucess');
+					setTimeout(function(){
+					  $(document.body).removeClass('ajx_sucess');
+					}, 3000); 
+				} else {
+					$(document.body).addClass('ajx_failure').removeClass('ajx_sucess');
+					$('.sentForm').removeClass('hide');
+				}
+			},
+            error:function (response) {
+            	$('.loader').addClass('hide');
+            	if($(document.body).hasClass('ajx_sucess')) {
+            		$(document.body).removeClass('ajx_sucess');
+            	}
+            	setTimeout(function(){
+					  $(document.body).removeClass('ajx_failure');
+					}, 3000);
+				$(document.body).addClass('ajx_failure');
+				$('.sentForm').removeClass('hide');
+            }
+			
 		});
 	}
 })(jQuery);
