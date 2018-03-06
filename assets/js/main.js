@@ -140,7 +140,7 @@
 					$(document.body).addClass('ajx_sucess');
 					setTimeout(function(){
 					  $(document.body).removeClass('ajx_sucess');
-					}, 3000); 
+					}, 5000); 
 				} else {
 					$(document.body).addClass('ajx_failure').removeClass('ajx_sucess');
 					$('.sentForm').removeClass('hide');
@@ -153,7 +153,7 @@
             	}
             	setTimeout(function(){
 					  $(document.body).removeClass('ajx_failure');
-					}, 3000);
+					}, 5000);
 				$(document.body).addClass('ajx_failure');
 				$('.sentForm').removeClass('hide');
             }
