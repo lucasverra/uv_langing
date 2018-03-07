@@ -99,7 +99,7 @@
 				ev.preventDefault();
 				var getvalue = $(this).parent().attr('data-nav');
 				if(getvalue == 'FR') {
-					$(document.body).removeClass('UK').addClass(getvalue);
+					$(document.body).removeClass('EN').addClass(getvalue);
 				} else {
 					$(document.body).removeClass('FR').addClass(getvalue);
 				}

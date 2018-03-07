@@ -3330,7 +3330,7 @@ label.error {
 .lan-fr,.lan-en {
 	display: none;
 }
-body.UK .lan-en {
+body.EN .lan-en {
 	display: block;
 }
 body.FR .lan-fr {
