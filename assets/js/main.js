@@ -32,6 +32,14 @@
 				textTypeAnimation.init('#test-data', 1000);
 				textTypeAnimation.init('#test-info', 1000);
 
+				if($('.how-it-works')[0]) {
+					$('.how-it-works').mouseover(function() {
+						$('.section-info').addClass('active');
+					});
+					$('.how-it-works').mouseleave(function() {
+						$('.section-info').removeClass('active');
+					});
+				} 
 				if($("#subscribe")) {
 					$("#subscribe").validate({
 						email: {
