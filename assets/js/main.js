@@ -33,12 +33,20 @@
 				textTypeAnimation.init('#test-info', 1000);
 
 				if($('.how-it-works')[0]) {
-					$('.how-it-works').mouseover(function() {
+					$('.how-it-works').mouseover(function(ev) {
 						$('.section-info').addClass('active');
 					});
-					$('.how-it-works').mouseleave(function() {
+					$('.how-it-works').mouseleave(function(ev) {
+						console.log(ev.target);	
 						$('.section-info').removeClass('active');
 					});
+					$('.section-info').mouseover(function() {
+						$('.section-info').addClass('active');
+					});
+					$('.section-info').mouseleave(function() {
+						$('.section-info').removeClass('active');
+					});
+
 				} 
 				if($("#subscribe")) {
 					$("#subscribe").validate({
