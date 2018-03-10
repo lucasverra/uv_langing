@@ -3359,13 +3359,13 @@ label.error {
 }
 
 .lan-fr,.lan-en {
-	display: none;
+	display: none !important;
 }
 body.EN .lan-en {
-	display: block;
+	display: block !important;
 }
 body.FR .lan-fr {
-	display: block;
+	display: block !important;
 }
 body.EN .language-selector span:before {
 	content: '';
