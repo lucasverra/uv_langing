@@ -115,7 +115,7 @@
 				ev.preventDefault();
 				var getvalue = $(this).parent().attr('data-nav');
 				if(getvalue == 'FR') {
-					$(document.body).removeClass('UK').addClass(getvalue);
+					$(document.body).removeClass('EN').addClass(getvalue);
 				} else {
 					$(document.body).removeClass('FR').addClass(getvalue);
 				}
@@ -156,7 +156,7 @@
 					$(document.body).addClass('ajx_sucess');
 					setTimeout(function(){
 					  $(document.body).removeClass('ajx_sucess');
-					}, 3000); 
+					}, 5000); 
 				} else {
 					$(document.body).addClass('ajx_failure').removeClass('ajx_sucess');
 					$('.sentForm').removeClass('hide');
@@ -169,7 +169,7 @@
             	}
             	setTimeout(function(){
 					  $(document.body).removeClass('ajx_failure');
-					}, 3000);
+					}, 5000);
 				$(document.body).addClass('ajx_failure');
 				$('.sentForm').removeClass('hide');
             }
