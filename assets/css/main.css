@@ -3442,6 +3442,7 @@ body.ajx_failure .failure {
     right: 90px;
     border-bottom: transparent;
     cursor: pointer;
+    color: #fff !important;
 }
 .section-info {
 	width: 100%;
@@ -3449,7 +3450,7 @@ body.ajx_failure .failure {
     transition:all .3s;
     -webkit-transition:all .3s;
     -ms-transition:all .3s;
-    background: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.3);
     position: absolute;
     z-index: -1;
     top: 52px;
@@ -3479,6 +3480,8 @@ body.ajx_failure .failure {
     align-items:center;
     -webkit-align-items:center;
     -ms-align-items:center;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 .section-info .mega-menu-wrap .grid {
 	flex-grow:1;
