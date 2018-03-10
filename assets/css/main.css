@@ -3367,7 +3367,7 @@ body.EN .lan-en {
 body.FR .lan-fr {
 	display: block;
 }
-body.UK .language-selector span:before {
+body.EN .language-selector span:before {
 	content: '';
 	background: url("images/uk.png") no-repeat;
 	width: 15px;
@@ -3469,9 +3469,6 @@ body.ajx_failure .failure {
 	width: 80%;
 	margin: 0 auto;
 	background:#fff;
-	display: flex;
-	-webkit-display: flex;
-	-ms-display: flex;
 	justify-content:center;
 	-webkit-justify-content:center;
 	-ms-justify-content:center;
@@ -3482,6 +3479,12 @@ body.ajx_failure .failure {
     -ms-align-items:center;
     border-bottom-right-radius: 5px;
     border-bottom-left-radius: 5px;
+    display: none;
+}
+body.EN .section-info .united_kingdom, body.FR .section-info .french {
+	display: flex;
+	-webkit-display: flex;
+	-ms-display: flex;
 }
 .section-info .mega-menu-wrap .grid {
 	flex-grow:1;
