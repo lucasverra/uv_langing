@@ -27,6 +27,13 @@
 				$body.removeClass('is-loading');
 			});
 			$(document).ready(function() {
+				var userLang = navigator.language || navigator.userLanguage;
+				var getLan = userLang.split('-')[0];
+				if(getLan == 'fr') {
+					$(document.body).addClass('FR').removeClass('EN');
+				} else {
+					$(document.body).addClass('EN').removeClass('FR');
+				}
 				console.log('fire ready');
 				languageSelector();
 				textTypeAnimation.init('#test-data', 1000);
